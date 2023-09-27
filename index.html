@@ -60,7 +60,17 @@
 
         //----------------------------
 
+        let str = prompt('Enter the string:');
+        let symbols = prompt('Enter characters separated by spaces:');
+        let arrSymbols = symbols.split(" ");
+        console.log(arrSymbols);
 
+        function removeSymbols(str, symbols){
+            strArr = str.split("");
+            let res = strArr.filter(item => !symbols.includes(item));
+            return res.join("");
+        }
+        console.log(removeSymbols(str, arrSymbols));
     </script>
 </body>
 </html>
