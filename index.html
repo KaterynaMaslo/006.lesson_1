@@ -41,6 +41,26 @@
             return res;
         }
         console.log(doMath(x, operation, y));
+
+        //----------------------------
+
+        function fillArr(){
+            let n = parseInt(prompt('Enter the length of the main array:', 2));
+            let matrix = [];
+            for(let i=0; i<n; i++){
+                let m = parseInt(prompt('Enter the length of the internal array:', 2));
+                matrix[i] = [];
+                for(let j=0;j<m; j++){
+                    matrix[i][j] = prompt('Enter the element:', 2);
+                }
+            }
+            return matrix;
+        }
+        console.log(fillArr());
+
+        //----------------------------
+
+
     </script>
 </body>
 </html>
