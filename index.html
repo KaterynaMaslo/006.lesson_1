@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = ['apple', 8, 6, 'banana', 2, 3.2];
+        function averageNum(arr){
+            let sum = 0;
+            let amount = 0;
+            for(let i=0; i<=arr.length;i++){
+                if(typeof arr[i] ==="number"){
+                    sum += parseFloat(arr[i]);
+                    amount++;
+                }
+            }
+            return sum/amount;
+        }
+        console.log(arr);
+        console.log(averageNum(arr));
+    </script>
+</body>
+</html>
