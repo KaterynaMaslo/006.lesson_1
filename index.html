@@ -9,8 +9,7 @@
     <script>
         let arr = ['apple', 8, 6, 'banana', 2, 3.2];
         function averageNum(arr){
-            let sum = 0;
-            let amount = 0;
+            let sum = 0; amount = 0;
             for(let i=0; i<=arr.length;i++){
                 if(typeof arr[i] ==="number"){
                     sum += parseFloat(arr[i]);
@@ -21,6 +20,27 @@
         }
         console.log(arr);
         console.log(averageNum(arr));
+
+        //----------------------------
+
+        let x = parseFloat(prompt('Enter the first number:', 1));
+        let y = parseFloat(prompt('Enter the second number:', 1));
+        let operation = prompt('Write the desired operation below (+, -, *, /, %, ^):', "+");
+
+        function doMath(x, znak, y){
+            let res = 0;
+            //res = (znak=="^") ? x**y : eval(`x${znak}y`);
+            switch (znak){
+            case "+": res=x+y; break;
+            case "-": res=x-y; break;
+            case "*": res=x*y; break;
+            case "/": res=x/y; break;
+            case "%": res=x%y; break;
+            case "^": res=x**y; break;
+            }
+            return res;
+        }
+        console.log(doMath(x, operation, y));
     </script>
 </body>
 </html>
